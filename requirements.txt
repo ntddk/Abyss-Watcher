@@ -1,0 +1,4 @@
+beautifulsoup4==4.5.1
+bs4==0.0.1
+PySocks==1.6.5
+python-magic==0.4.12
