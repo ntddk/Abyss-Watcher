@@ -104,7 +104,7 @@ if __name__ == '__main__':
     print('  | | | | |_) | |_| \__ \__ \\  /\  / (_| | || (__| | | |  __/ |   ')
     print('  \_| |_/_.__/ \__, |___/___/ \/  \/ \__,_|\__\___|_| |_|\___|_|   ')
     print('                __/ |                                              ')
-    print('               |___/     v 0.1                                     ')
+    print('               |___/     v 0.2                                     ')
     print('')
 
     parser = argparse.ArgumentParser(description='Abyss Watcher - Malware Downloader')
