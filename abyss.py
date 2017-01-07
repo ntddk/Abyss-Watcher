@@ -108,7 +108,7 @@ if __name__ == '__main__':
     print('')
 
     parser = argparse.ArgumentParser(description='Abyss Watcher - Malware Downloader')
-    parser.add_argument('-path', '-p', type=str, help='destination path')
+    parser.add_argument('--path', '-p', type=str, help='destination path')
     parser.add_argument('--torify', '-t', action='store_true', help='torify')
     args = parser.parse_args()
 

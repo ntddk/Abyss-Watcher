@@ -24,7 +24,7 @@ python abyss.py -t
 The best way to use Abyss Watcher is to run it routinely from cron--with random delay--like this.
 
 ```
-0 0 * * * sleep `expr $RANDOM \% 36000`; /home/ntddk/Abyss-Watcher/abyss.py -t
+0 0 * * * sleep `expr $RANDOM \% 3600`; python /home/ntddk/Abyss-Watcher/abyss.py -t
 ```
 
 Enjoy!
