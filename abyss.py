@@ -125,13 +125,15 @@ if __name__ == '__main__':
     else:
         dest_path = today
 
+    logger.debug('{0}: {1}'.format(__name__, today))
+
     if args.torify:
         socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9050)
         socket.socket = socks.socksocket
 
     import urllib2
 
-    logger.debug('{0}: {1}'.format(__name__, today))
+    logger.debug('{0}: {1}'.format(__name__, urllib2.urlopen("https://api.ipify.org?format=json").read()))
 
     try:
         t1 = threading.Thread(target = malwaredl, args = (fetch_soup(__name__, 'http://www.malwaredomainlist.com/hostslist/mdl.xml'), dest_path))
