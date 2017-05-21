@@ -97,14 +97,14 @@ def malc0de(soup, dest_path):
             fetch_file(name, 'http://' + ip_address, dest_path)
 
 if __name__ == '__main__':
-    print('    ___  _                    _    _       _       _               ')
-    print('   / _ \| |                  | |  | |     | |     | |              ')
-    print('  / /_\ \ |__  _   _ ___ ___ | |  | | __ _| |_ ___| |__   ___ _ __ ')
-    print('  |  _  | `_ \| | | / __/ __|| |/\| |/ _` | __/ __| `_ \ / _ \ `__|')
-    print('  | | | | |_) | |_| \__ \__ \\  /\  / (_| | || (__| | | |  __/ |   ')
-    print('  \_| |_/_.__/ \__, |___/___/ \/  \/ \__,_|\__\___|_| |_|\___|_|   ')
-    print('                __/ |                                              ')
-    print('               |___/     v 0.2                                     ')
+    print('    ___  _                     _    _       _       _               ')
+    print('   / _ \| |                   | |  | |     | |     | |              ')
+    print('  / /_\ \ |__  _   _ ___ ___  | |  | | __ _| |_ ___| |__   ___ _ __ ')
+    print('  |  _  | `_ \| | | / __/ __| | |/\| |/ _` | __/ __| `_ \ / _ \ `__|')
+    print('  | | | | |_) | |_| \__ \__ \ \  /\  / (_| | || (__| | | |  __/ |   ')
+    print('  \_| |_/_.__/ \__, |___/___/  \/  \/ \__,_|\__\___|_| |_|\___|_|   ')
+    print('                __/ |                                               ')
+    print('               |___/      v 0.2                                     ')
     print('')
 
     parser = argparse.ArgumentParser(description='Abyss Watcher - Malware Downloader')
@@ -137,7 +137,7 @@ if __name__ == '__main__':
 
     try:
         t1 = threading.Thread(target = malwaredl, args = (fetch_soup(__name__, 'http://www.malwaredomainlist.com/hostslist/mdl.xml'), dest_path))
-        t2 = threading.Thread(target = vxvault, args = (fetch_soup(__name__, 'http://vxvault.siri-urz.net/URL_List.php'), dest_path))
+        t2 = threading.Thread(target = vxvault, args = (fetch_soup(__name__, 'http://vxvault.net/URL_List.php'), dest_path))
         t3 = threading.Thread(target = malc0de, args = (fetch_soup(__name__, 'http://malc0de.com/rss'), dest_path))
         t1.start()
         t2.start()
